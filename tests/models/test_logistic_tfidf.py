@@ -116,6 +116,7 @@ class LogisticTfidfTests(unittest.TestCase):
         )
         self.assertGreaterEqual(report["validation"]["recall"], 0.8)
         self.assertNotIn("test", report)
+        self.assertNotIn("train_test_f1_gap_pp", report)
         self.assertEqual(
             set(report["validation"]),
             {
@@ -142,6 +143,14 @@ class LogisticTfidfTests(unittest.TestCase):
         self.assertEqual(predictions["CommentId"].tolist(), ["e1", "e2"])
         report = json.loads((self.output_dir / "metrics.json").read_text(encoding="utf-8"))
         self.assertIn("test", report)
+        model = joblib.load(self.output_dir / "logistic_tfidf.joblib")
+        train = load_partitions(self.dataset_path, self.manifest_path)["train"]
+        _, expected_train = evaluate(model, train, threshold=report["threshold"])
+        self.assertEqual(report["train"], expected_train)
+        self.assertAlmostEqual(
+            report["train_test_f1_gap_pp"],
+            100 * abs(expected_train["f1"] - report["test"]["f1"]),
+        )
         self.assertTrue(
             predictions["prediction"].eq(
                 predictions["probability"].ge(report["threshold"]).astype(int)

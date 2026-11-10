@@ -76,11 +76,38 @@ una sola evaluación final:
 .\.venv\Scripts\python.exe scripts/train_logistic_tfidf.py --dataset data/raw/youtoxic_english_1000.csv --final-test --ensemble-config configs/ensemble.json
 ```
 
-Esto añade `test_predictions.csv` y las métricas de test a `metrics.json`. El
+Esto añade `test_predictions.csv`, las métricas de test y la brecha absoluta
+de F1 entre entrenamiento y test, en puntos porcentuales, a `metrics.json`.
+El informe siempre incluye las métricas de entrenamiento y validación. El
 umbral se vuelve a obtener exclusivamente de validación y después se aplica al
-test. No usar esos resultados para ajustar el modelo, el umbral o los pesos del
-ensemble. La exportación contiene probabilidades alineadas por `CommentId` para
-compararlas con SVM y transformer.
+entrenamiento y al test. El test queda reservado para confirmar el resultado
+del modelo ya fijado. La exportación contiene probabilidades alineadas por
+`CommentId` para compararlas con SVM y transformer.
+
+### Reproducción del test histórico
+
+El PR #5 reprodujo la línea base con Python 3.12.14, pandas 3.0.5, NumPy 2.5.3,
+scikit-learn 1.9.1 y joblib 1.6.0. Los hashes del CSV y del manifiesto coinciden
+con los de la primera validación. Se usaron los mismos hiperparámetros y la
+misma partición por vídeo. Para conservar separadas las salidas, añade
+`--output-dir data/local/experiments/pr-5-logistic-baseline` al comando anterior.
+
+Se fijó el umbral `0,38749398834051363` en validación con un objetivo de recall
+del 80 %. Se aplicó ese mismo valor a las tres particiones para `IsToxic=1`.
+
+| Partición | Comentarios | Vídeos | Precisión | Recall | F1 | PR-AUC | TN / FP / FN / TP |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Entrenamiento | 580 | 5 | 87,86 % | 100,00 % | 93,54 % | 0,9990 | 300 / 34 / 0 / 246 |
+| Validación | 219 | 3 | 66,89 % | 80,49 % | 73,06 % | 0,7793 | 47 / 49 / 24 / 99 |
+| Test histórico | 185 | 4 | 57,04 % | 87,50 % | 69,06 % | 0,7146 | 39 / 58 / 11 / 77 |
+
+La brecha absoluta de F1 es **24,48 puntos porcentuales**, frente al objetivo
+de menos de 5. En test, el modelo detectó 77 de 88 positivos y generó 58 falsas
+alertas entre los 135 comentarios que marcó. La caída de F1 y PR-AUC en vídeos
+reservados indica que el rendimiento de entrenamiento sobreestima la capacidad
+de generalización. El test cubre cuatro vídeos y ya se había evaluado. Si se
+ajusta el modelo a partir de estos resultados, la nueva confirmación requiere
+vídeos independientes. Los artefactos y predicciones quedan en `data/local/`.
 
 El conjunto es pequeño y contiene solo 12 vídeos identificados, por lo que
 los resultados dependerán de los vídeos reservados y no demostrarán desempeño
