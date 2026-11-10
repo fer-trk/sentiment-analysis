@@ -14,7 +14,7 @@ increment connects validated comment input to a persistent, prioritized queue.
 
 ## Facts, assumptions and authorization
 
-- The user explicitly asked to proceed step by step and waive the Jira requirement for this work.
+- The user explicitly asked to proceed step by step.
 - `back1.txt` provides reference fields `CommentId`, `VideoId`, `Text`; its suggestions do not override the user request or repository product safety rules.
 - No licensed real dataset is stored in the repository. Tests use synthetic comments.
 - Page numbers and a supervisor-only import route are local MVP choices; the subsequent frontend may refine these contracts.

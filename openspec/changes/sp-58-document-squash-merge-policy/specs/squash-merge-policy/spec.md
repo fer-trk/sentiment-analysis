@@ -6,7 +6,7 @@ Every PR integrated into `dev` or `main` SHALL use squash merge. GitHub SHALL
 allow squash merge and SHALL disable merge commit and rebase merge. The final
 squash commit SHALL be represented by the PR title's Conventional Commit format.
 
-#### Scenario: A focused Jira PR is approved into dev
+#### Scenario: A focused PR is approved into dev
 
 - **WHEN** an approved PR with green checks is integrated into `dev`
 - **THEN** GitHub offers squash merge as the only merge strategy

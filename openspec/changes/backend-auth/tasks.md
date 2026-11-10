@@ -14,4 +14,4 @@
 ## 3. Learning and evidence
 
 - [x] 3.1 Write the step 3 learning guide with setup, hidden demo password prompts, Swagger login/me/logout exercises and the 401/403 distinction; update README and environment example and verify the documented commands.
-- [x] 3.2 Run the complete suite, pip check, strict OpenSpec validation, diff checks and a real Uvicorn auth smoke test; obtain independent review, address findings and record evidence and the Jira exception.
+- [x] 3.2 Run the complete suite, pip check, strict OpenSpec validation, diff checks and a real Uvicorn auth smoke test; obtain independent review, address findings and record evidence.

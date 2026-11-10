@@ -9,4 +9,4 @@
 
 - [ ] 2.1 Reconcile the decision to version the CSV in dev but exclude it from main with SDD and harness; record redistribution status and promotion procedure for review.
 - [x] 2.2 Validate OpenSpec strictly and run git diff --check; both commands passed on 2026-09-15.
-- [ ] 2.3 Open a PR into dev with Jira, test evidence and rollback; obtain another teammate's approval.
+- [ ] 2.3 Open a PR into dev with test evidence and rollback; obtain another teammate's approval.

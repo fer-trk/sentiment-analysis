@@ -5,7 +5,7 @@ The repository uses squash merge exclusively for PRs integrated into `dev` and
 commit and rebase merge. Branch protection additionally requires linear history
 on both integration branches.
 
-This fits a short project because one focused Jira PR becomes one reviewable
+This fits a short project because one focused PR becomes one reviewable
 commit, represented by its validated Conventional Commit title. It avoids merge
 commit noise and rebase-based history rewriting without introducing another
 tool, workflow, or release process.

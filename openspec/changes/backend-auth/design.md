@@ -3,7 +3,7 @@
 ## Context
 
 See proposal.md and specs/backend-auth/spec.md. The user explicitly requested
-step 3 and previously waived Jira. The integrated branch already has the
+step 3. The integrated branch already has the
 step-2 SQLite schema for users and comments. This change migrates it to add auth.
 
 ## Decisions

@@ -9,7 +9,7 @@ Actualizar este archivo, sin crear uno por día.
 - Gabriela y Fernanda continúan como integrantes activas del proyecto.
 - Cada integrante mantiene un foco principal; revisión, pairing y participación transversal rotan por historia.
 - Proyecto de siete días hábiles, con prioridad en aprendizaje, UX/UI y Product Discovery.
-- Repositorio y entorno .venv creados; Jira disponible y utilizado desde esta conversación.
+- Repositorio y entorno .venv creados.
 
 ## Producto: acuerdos vigentes
 
@@ -26,7 +26,7 @@ Actualizar este archivo, sin crear uno por día.
 
 ## Organización y entrega
 
-- Git conserva el código y la evidencia técnica; Jira puede utilizarse para coordinar tareas cuando resulte útil.
+- Git conserva el código y la evidencia técnica.
 - `dev` es la rama de integración y `main` queda reservada para versiones estables.
 - El equipo eliminó el Harness y su validación obligatoria porque estaban bloqueando la entrega sin aportar suficiente valor al proyecto.
 - OpenSpec deja de ser un requisito de aceptación o merge.
@@ -63,7 +63,6 @@ Actualizar este archivo, sin crear uno por día.
 - Evidencias: 9 tests aprobados y comprobaciones de whitespace aprobadas.
 - PR #14 de extracción y validación del dataset integrado en `dev`.
 - CSV retirado del versionado actual y conservado localmente; permanece en commits anteriores.
-- Registró avances y daily en Jira SP-21.
 
 ## Pendientes de cierre y continuación
 

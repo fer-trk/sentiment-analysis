@@ -14,7 +14,7 @@ user chose SQLite direct access for all four steps.
 | `python -m pip check` | No broken requirements found |
 | Strict OpenSpec validation | `backend-auth` is valid |
 | `git diff --check` | No whitespace errors |
-| Repository harness | Only failure: branch name lacks the Jira SP key, explicitly waived by the user |
+| Repository harness | Only failure: the historical branch naming rule did not accept this branch |
 
 Test command: `.venv/Scripts/python.exe -m pytest -q --tb=short
 --basetemp=.pytest_cache/auth-temp`. The suite continues to expose two existing
@@ -67,6 +67,5 @@ The integrated branch retains users and comments from step 2 and adds sessions
 and login attempts through schema version 2. This is a local demo implementation; deployment,
 HTTPS termination and network-wide abuse controls require a separate design.
 
-Jira enforcement remains unchanged in the repository; the failure is recorded
-instead of hidden. No team merge approval, commit, push, deployment or OpenSpec
+The historical branch naming check failed. No team merge approval, commit, push, deployment or OpenSpec
 archive is claimed by these results.

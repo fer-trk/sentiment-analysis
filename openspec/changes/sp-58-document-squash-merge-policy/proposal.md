@@ -1,7 +1,7 @@
 ## Why
 
 SP-58 records the already configured squash-only merge strategy as canonical
-team policy. This keeps focused Jira changes traceable in a linear history
+team policy. This keeps focused changes traceable in a linear history
 without adding tooling or changing the approved review, check, or release flow.
 
 ## What Changes

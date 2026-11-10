@@ -23,7 +23,6 @@ decide which dataset comment to review first.
 
 ### Validated facts
 
-- Jira story: SP-2, under epic SP-1.
 - The team selected a prioritized dataset queue as the primary MVP journey.
 - The team confirmed the moderator as the only operational MVP persona and a
   local, reversible review mark as the only recorded moderation state.

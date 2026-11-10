@@ -8,7 +8,7 @@ Primary user: the human moderator who needs enough authorised context to review 
 
 Expected outcome: a moderator can select a queue item, inspect its full text only in the authorised detail view, choose a supported review action, optionally add a non-sensitive note, and receive durable feedback from the backend.
 
-Traceability: Jira key not supplied in the request; assign the project key before formal PR tracking. This proposal is otherwise scoped to `feat/frontend-review-actions`.
+Scope: `feat/frontend-review-actions`.
 
 ## Relationship to previous verticals
 

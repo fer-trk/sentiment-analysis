@@ -246,4 +246,4 @@ Consulta también [OWASP sobre sesiones](https://cheatsheetseries.owasp.org/chea
 
 El backend no incluye registro público, recuperación de contraseña o administración
 de usuarios. Los flujos de comentarios, reservas y reaperturas siguen en sus
-entregas correspondientes. La excepción de Jira sigue limitada a este trabajo local.
+entregas correspondientes.

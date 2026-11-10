@@ -7,7 +7,7 @@
 
 ## 2. Harness rule and evidence
 
-- [x] 2.1 Require Jira and OpenSpec fields in pull-request events.
+- [x] 2.1 Require an OpenSpec field in pull-request events.
 - [x] 2.2 Permit a linked OpenSpec path or `N/A — <reason>` for non-material
   work.
 - [x] 2.3 Add and run standard-library tests for valid and invalid metadata.
@@ -17,4 +17,4 @@
 ## 3. Review
 
 - [ ] 3.1 Obtain an independent review through a PR into `dev`.
-- [ ] 3.2 Record the review evidence and Jira decision.
+- [ ] 3.2 Record the review evidence.

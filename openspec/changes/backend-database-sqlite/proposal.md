@@ -16,7 +16,6 @@ and queue operations can be implemented.
 The user chose SQLite direct access for the integrated four-step branch. The
 separate SQLAlchemy/Alembic exploration remains in its own worktree; it is not
 copied because its schema conflicts with the later authentication and queue.
-The previously granted local Jira exception applies; no repository standard is changed.
 
 ## Non-goals
 

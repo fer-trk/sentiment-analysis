@@ -104,4 +104,4 @@ El diseño en **Figma queda temporalmente diferido** hasta recoger esta validaci
 
 ## Criterio de salida de SP-7
 
-La evidencia de SP-7 queda preparada con esta visión de producto, sus límites explícitos y un plan de validación pendiente. El cierre de SP-7 en Jira queda fuera de este cambio.
+La evidencia de SP-7 queda preparada con esta visión de producto, sus límites explícitos y un plan de validación pendiente.

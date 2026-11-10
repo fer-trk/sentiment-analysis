@@ -33,8 +33,6 @@ Pydantic Settings; pytest y HTTPX para desarrollo.
 
 - Hecho: se ha leído `back1.txt`, facilitado por el usuario, y la documentación
   de producto y estándares del repositorio.
-- Hecho: el usuario ha autorizado continuar sin exigir una historia Jira.
-  Esta excepción corresponde a este trabajo; no cambia las normas del equipo.
 - Supuesto operativo: comenzar con una entrega local pequeña facilita el
   aprendizaje solicitado. El objetivo completo sigue siendo el backend del portal.
 - Alcance de esta entrega: infraestructura de la API; no decide las reglas de reapertura.

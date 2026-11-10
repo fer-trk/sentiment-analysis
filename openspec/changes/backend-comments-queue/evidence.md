@@ -30,9 +30,7 @@ there is no independent approval to claim. The project harness passed locally.
 
 The simulated score is arbitrary and has no toxicity validity. Offset pages
 may shift under concurrent imports. Real dataset licensing, retention, model
-evaluation, human review and deployment remain future work. The user explicitly
-waived the Jira prerequisite for this local learning work; the repository
-standard itself was not changed.
+evaluation, human review and deployment remain future work.
 
 ## Integrated four-step branch
 

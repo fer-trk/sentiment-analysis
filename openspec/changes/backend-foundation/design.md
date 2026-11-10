@@ -2,7 +2,7 @@
 
 ## Context
 
-See `proposal.md` for motivation and authorization to omit Jira for this work.
+See `proposal.md` for motivation.
 The repository has no runtime application. Python 3.12 is available locally.
 The learner wants executable increments and an explanation of each component.
 
@@ -72,8 +72,6 @@ dependencies without changing the meaning of liveness.
   directly inspectable without loading the Swagger browser assets.
 - [Unreviewed dependency updates] -> Record tested dependency versions in a
   constraints file alongside compatible direct requirements in `pyproject.toml`.
-- [No Jira identifier] -> Record the explicit user exception and report the
-  existing branch-name harness failure separately; do not weaken its rules.
 - [Conflict in future reopening behavior] -> Preserve the existing SP-2
   contract and document the discrepancy until the reopening increment is designed.
 - [Raw data leakage] -> This increment reads no dataset and introduces no

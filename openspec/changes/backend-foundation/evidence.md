@@ -1,7 +1,7 @@
 # Evidence: backend foundation
 
 Date: 2026-09-17. Environment: Windows, Python 3.12.10.
-Branch: `feature/backend-foundation`. Jira omitted by explicit user instruction.
+Branch: `feature/backend-foundation`.
 
 ## Behavior and verification
 
@@ -15,7 +15,7 @@ Branch: `feature/backend-foundation`. Jira omitted by explicit user instruction.
 | Real Uvicorn process, `GET /openapi.json` | HTTP 200, title and health route verified |
 | `openspec validate backend-foundation --strict` | Valid |
 | `git diff --check` | No whitespace errors in the tracked diff |
-| `python scripts/validate_harness.py` | Fails only the branch-name requirement for a Jira SP key |
+| `python scripts/validate_harness.py` | Fails only the branch-name requirement in the historical harness |
 
 The smoke server used an available loopback port and was stopped afterward.
 The browser rendering of Swagger CDN assets was not part of the HTTP smoke
@@ -40,8 +40,7 @@ currently recommends HTTPX2, and its AnyIO BlockingPortal import uses a deprecat
 alias. They originate in dependencies, are not suppressed, and do not fail the
 verified tests. Revisit these dependencies when the integration changes.
 
-The existing harness remains intact. Its Jira branch restriction is an explicit
-exception for this local work, not a passing check or permission to merge.
+The historical harness rejected the branch name.
 No independent teammate review, commit, push, merge, deployment or archive was
 performed. Moderation, persistence and authentication are future increments,
 listed in the learning guide; this evidence does not claim the full backend is done.
