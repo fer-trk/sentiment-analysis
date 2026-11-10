@@ -16,6 +16,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install backend and test dependencies
-        run: python -m pip install -c backend/constraints.txt -e '.[dev]'
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -c backend/constraints.txt -e '.[dev,model]'
       - name: Run API tests
-        run: python -m pytest backend/tests -q
+        run: .venv/bin/python -m pytest backend/tests -q
