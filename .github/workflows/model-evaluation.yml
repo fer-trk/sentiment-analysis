@@ -1,0 +1,30 @@
+name: Model evaluation checks
+
+on:
+  pull_request:
+    branches: [dev]
+    paths:
+      - '.github/workflows/model-evaluation.yml'
+      - 'src/moderation/**'
+      - 'scripts/train_logistic_tfidf.py'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'backend/constraints.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  logistic-evaluation-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install model and test dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -c backend/constraints.txt -e '.[dev,model]'
+      - name: Verify logistic metrics and test isolation
+        run: .venv/bin/python -m pytest tests/models/test_logistic_tfidf.py tests/models/test_final_test_gate.py -q

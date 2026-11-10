@@ -225,6 +225,7 @@ def run_training(
     validation_actual = validation["IsToxic"].astype(int).to_numpy()
     validation_probability = model.predict_proba(validation["Text"].str.strip())[:, 1]
     threshold = select_threshold(validation_actual, validation_probability)
+    _, train_metrics = evaluate(model, train, threshold=threshold)
     validation_predictions, validation_metrics = evaluate(
         model,
         validation,
@@ -244,6 +245,7 @@ def run_training(
         "excluded_unknown_video_rows": (
             len(_read_dataset(dataset_path)) - sum(map(len, partitions.values()))
         ),
+        "train": train_metrics,
         "validation": validation_metrics,
     }
     if final_test:
@@ -254,6 +256,7 @@ def run_training(
         )
         test_predictions.to_csv(output / "test_predictions.csv", index=False)
         report["test"] = test_metrics
+        report["train_test_f1_gap_pp"] = 100 * abs(train_metrics["f1"] - test_metrics["f1"])
     else:
         stale_test = output / "test_predictions.csv"
         if stale_test.exists():
