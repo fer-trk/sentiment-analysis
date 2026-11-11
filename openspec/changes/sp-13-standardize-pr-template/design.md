@@ -9,8 +9,7 @@ OpenSpec for material changes, not for every edit.
 
 Use one English PR template with a stable section order: context and
 traceability, outcome, acceptance criteria, validation, data/security/operations,
-risks/rollback, and review. The Jira and OpenSpec fields are required by the
-existing Python validator.
+risks/rollback, and review.
 
 The OpenSpec value is valid when it matches
 `openspec/changes/<lowercase-kebab-case-change>/`, optionally wrapped in

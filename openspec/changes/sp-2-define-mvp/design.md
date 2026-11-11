@@ -16,7 +16,7 @@ labels are too sparse to support credible standalone MVP classifiers.
 **Goals:**
 
 - Give downstream stories one small, testable target and primary journey.
-- Preserve traceability from Jira through OpenSpec to future evidence.
+- Preserve traceability from the project scope through OpenSpec to future evidence.
 - Prevent leakage, overclaiming, sensitive-text logging, and automatic actions.
 - Keep the contract compatible with an early AWS deployment without selecting
   infrastructure prematurely.
@@ -89,7 +89,7 @@ record identifier; they must exclude raw text from operational logs.
 ### Use a Spec Kit-inspired planning sequence
 
 The repository maps shared principles to `docs/base-standards.md`, product intent
-to Jira and `proposal.md`, observable behavior to delta specs, technical choices
+to `proposal.md`, observable behavior to delta specs, technical choices
 to `design.md`, and verifiable work to `tasks.md`. This borrows Spec Kit's
 separation of concerns without adopting an additional parallel framework.
 
@@ -113,8 +113,7 @@ separation of concerns without adopting an additional parallel framework.
 
 This change modifies planning artifacts only. After team approval, downstream
 stories SP-20, SP-34, SP-50, and SP-54 should reference this contract before
-implementation. If the team rejects a product decision, revise the Jira story
-and this change together; no runtime rollback is required.
+implementation. If the team rejects a product decision, revise this change; no runtime rollback is required.
 
 ## Open Questions
 

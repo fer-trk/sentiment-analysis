@@ -4,14 +4,13 @@
 
 On a pull-request event, the repository harness SHALL require the PR title to
 match `^(feat|fix|docs|test|ci|chore)(\([a-z0-9][a-z0-9-]*\))?!?: [a-z0-9].+$`.
-The rule SHALL apply to work PRs and release PRs. Jira traceability SHALL remain
-independently required in the branch, title, or body.
+The rule SHALL apply to work PRs and release PRs.
 
 #### Scenario: A focused work PR has a valid title
 
 - **WHEN** a PR title is `feat: add toxicity prediction endpoint`
 - **THEN** the Conventional Commit title check passes
-- **AND** the existing Jira, OpenSpec, and branch checks still run
+- **AND** the existing OpenSpec and branch checks still run
 
 #### Scenario: A title uses an unsupported type or invalid structure
 

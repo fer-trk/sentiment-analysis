@@ -7,9 +7,6 @@ su contrato. Es la base del backend: todavía no guarda comentarios, autentica
 usuarios ni calcula toxicidad. Esas funciones se construirán en las siguientes
 entregas, manteniendo el contexto del proyecto y `back1.txt`.
 
-En esta sesión el usuario ha indicado continuar sin exigir una historia Jira.
-La excepción está recogida en el cambio OpenSpec `backend-foundation`.
-
 ## Qué hace el backend
 
 El frontend presenta la interfaz. El backend recibe peticiones, comprueba qué

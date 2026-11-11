@@ -4,15 +4,13 @@
 
 The repository SHALL provide one English PR template with sections for context
 and traceability, what changes and why, acceptance criteria, validation,
-data/security/operations, risks/decisions/rollback, and review. Each PR body
-SHALL include a Jira field containing an `SP-<number>` key.
+data/security/operations, risks/decisions/rollback, and review.
 
 #### Scenario: A contributor opens a work PR
 
 - **WHEN** a contributor opens a PR
-- **THEN** the template makes Jira, outcome, acceptance criteria, validation,
+- **THEN** the template makes outcome, acceptance criteria, validation,
   risk, rollback, and reviewer evidence visible
-- **AND** the harness accepts the Jira field when it contains an `SP-<number>` key
 
 ### Requirement: OpenSpec traceability is explicit and proportionate
 
@@ -49,7 +47,7 @@ appropriate.
 
 ### Requirement: Existing gates remain independent
 
-The template rule SHALL NOT replace branch naming, Jira traceability, Conventional
+The template rule SHALL NOT replace branch naming, Conventional
 Commit titles, release-source checks, independent review, or acceptance evidence.
 
 #### Scenario: A title and template field are both invalid

@@ -15,7 +15,6 @@ enters the integration history.
 
 ### Validated facts
 
-- Jira story: SP-57.
 - The existing `validate` workflow runs `scripts/validate_harness.py` for pull
   requests into `dev` and `main`.
 - `dev` integrates focused changes through squash merge.
@@ -30,4 +29,4 @@ enters the integration history.
 ## Impact
 
 PRs with an invalid title fail the existing required `validate` check. Existing
-Jira, branch naming, OpenSpec, and release-source validation remain unchanged.
+branch naming, OpenSpec, and release-source validation remain unchanged.

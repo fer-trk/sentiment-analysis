@@ -33,7 +33,7 @@ de datos vive por defecto en `data/local/moderation.db`, excluido de Git.
 
 ## Authorization and boundaries
 
-El usuario autoriza continuar sin Jira en esta conversación. El documento
+El documento
 `back1.txt` aporta dos roles y usuarios precargados; no autoriza registro público,
 administración de usuarios ni acciones externas. La persistencia añadida es la
 necesaria para autenticación; usuarios y comentarios del paso 2 se conservan.

@@ -12,4 +12,4 @@
 ## 3. Review
 
 - [ ] 3.1 Obtain independent review through a PR into `dev`.
-- [ ] 3.2 Record the resulting evidence and Jira decision.
+- [ ] 3.2 Record the resulting evidence.

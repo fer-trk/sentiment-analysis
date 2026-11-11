@@ -10,14 +10,13 @@ reviewable non-material justification.
 - Replace the initial PR template with a standard English structure for
   traceability, outcome, acceptance criteria, validation, safety, rollback, and
   review.
-- Require explicit Jira and OpenSpec fields through the existing harness.
+- Require an explicit OpenSpec field through the existing harness.
 - Permit `N/A — <reason>` only as a reviewable declaration for non-material
   changes.
 - Add standard-library tests for the metadata rule.
 
 ### Validated facts
 
-- Jira story: SP-13.
 - The repository has one existing PR template and one dependency-light
   validation workflow.
 - SP-57 already validates Conventional Commit PR titles.
@@ -26,9 +25,8 @@ reviewable non-material justification.
 
 - Adding issue templates, dependencies, workflows, GitHub Settings, or automatic
   materiality classification.
-- Replacing Jira, OpenSpec, or independent review with template text.
+- Replacing OpenSpec or independent review with template text.
 
 ## Impact
 
-Future PRs present consistent evidence to reviewers. A missing Jira field or
-unexplained absent OpenSpec field fails the existing `validate` check.
+Future PRs present consistent evidence to reviewers. An unexplained absent OpenSpec field fails the existing `validate` check.

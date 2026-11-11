@@ -18,7 +18,7 @@ historia para distribuir aprendizaje y evitar silos.
 - Hipótesis operativa: desplegar temprano en AWS mediante la infraestructura
   facilitada por Miguel puede acelerar el aprendizaje. La arquitectura todavía
   no está seleccionada.
-- Jira será el sistema de seguimiento; Git será la fuente de verdad técnica.
+- Git es la fuente de verdad técnica. Los cambios se revisan mediante pull requests.
 
 ## Resultado buscado
 

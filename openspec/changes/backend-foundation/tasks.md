@@ -10,8 +10,7 @@ las capas de negocio y persistencia cuando tengan comportamiento real.
 ## Global constraints
 
 Identificadores en inglés; explicación en español. Sin datos reales,
-credenciales, moderación externa o despliegue. Jira omitido por instrucción
-expresa del usuario. No se cambia el contrato de reapertura en esta entrega.
+credenciales, moderación externa o despliegue. No se cambia el contrato de reapertura en esta entrega.
 
 ## 1. Runtime and contract
 
@@ -46,7 +45,7 @@ Secuencia verificable de 1.2:
 ## 2. Learning and integration
 
 - [x] 2.1 Escribir `docs/backend/01-primer-endpoint.md`, `.env.example` y la entrada del README; verificar los comandos, referencias y el recorrido hasta `/docs`.
-- [x] 2.2 Verificar toda la suite, el contrato OpenSpec, `git diff --check` y HTTP real con Uvicorn; registrar resultados y la excepción Jira en `evidence.md`.
+- [x] 2.2 Verificar toda la suite, el contrato OpenSpec, `git diff --check` y HTTP real con Uvicorn; registrar resultados en `evidence.md`.
 
 La guía debe mostrar el recorrido HTTP, explicar cada archivo y el comando de
 arranque, proponer un ejercicio de configuración y distinguir lo entregado de
@@ -63,5 +62,4 @@ git diff --check
 ```
 
 Comprobar `/health`, `/docs` y `/openapi.json` por HTTP antes de dar por
-completada la entrega. El validador de ramas exige Jira; registrar ese resultado
-concreto sin cambiar el validador ni fingir que ha pasado.
+completada la entrega.
